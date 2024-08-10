@@ -5,18 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <div class="overlay"></div>
+    <header>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#"><img src="./images/icon-close.svg" class="close-menu" alt="close menu"></a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-  Collections
+      <div class="header-left">
+        <img src="./images/icon-menu.svg" class="menu-img" alt="open menu">
+        <img src="./images/logo.svg" class="logo-img" alt="logo">
+      </div>
+
+      <div class="header-right">
+        
+        <div class="test">
+          <div id="item-output">
+            <p>3</p>
+          </div>
+          <img src="./images/icon-cart.svg" class="cart-img" alt="cart icon">
+        </div>
+        <img src="./images/image-avatar.png" class="profile-img" alt="profile picture">
+      </div>
+    </header>
+
+    <section>
+      <section class="profile-box">
+        <div class="profile-card">
+          <img src="./images/icon-close.svg" class="profile-close-btn" alt="">
+          <img src="./images/image-avatar.png" alt="profile picture">
+        </div>
+
+        <div class="profile-buttons" id="first-item"><p>Setting</p></div>
+        <div class="profile-buttons"><p>Update Account</p></div>
+        <div class="profile-buttons" id="logout"><p>Logout</p></div>
+        
+        <!--  -->
+        
+        <label class="switch">
+          <input type="checkbox" id="darkmode">
+          <span class="slider round"></span>
+        </label>
+      </section>
+    </section>
+  </main>
+
+  <!-- Collections
   Men
   Women
   About
@@ -34,11 +81,12 @@
   $250.00
 
   0
-  Add to cart
+  Add to cart -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
+<script src="main.js"></script>
 </html>
