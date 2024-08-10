@@ -6,6 +6,14 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="profileCard.css">
+  <link rel="stylesheet" href="darkMode.css">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -61,6 +69,60 @@
         </label>
       </section>
     </section>
+
+    <!-- TOP SECTION -->
+      <section class="top-section">
+        <div class="hero-img">
+          <!-- Images will be dynamically inserted here -->
+      </div>
+  
+      <div class="nav-btn-box">
+          <div class="nav-btn">
+              <img src="./images/icon-previous.svg" class="previous-btn" alt="Previous">
+          </div>
+          <div class="nav-btn">
+              <img src="./images/icon-next.svg" class="next-btn" alt="Next">
+          </div>
+      </div>
+      </section>
+
+      <section class="middle-section">
+        <div class="brand-name">
+          <p>SNEAKER COMPANY</p>
+        </div>
+        <div class="product-name">
+          <p id="product-name-title">Fall Limited Edition Sneakers</p>
+        </div>
+        <div class="product-description">
+          <p id="description">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+        </div>
+      </section>
+
+      <section class="bottom-section">
+        <div class="price-box">
+          <div class="discount-box">
+            <p id="discount-price">$125.00</p>
+            <p id="discount">50%</p>
+          </div>
+
+          <div class="full-price">
+            <p>$250.00</p>
+          </div>
+        </div>
+        <div class="numOfItem">
+          <img src="./images/icon-minus.svg" alt="minus number of items">
+          <input type="number" value="0">
+          <img src="./images/icon-plus.svg" alt="plus number of items">
+        </div>
+
+        <div class="cartBtn">
+          <img src="./images/icon-cart.svg" alt="cart image">
+          <p>Add to cart</p>
+        </div>
+      </section>
   </main>
 
   <!-- Collections
@@ -87,6 +149,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
 </body>
 <script src="main.js"></script>
 </html>
