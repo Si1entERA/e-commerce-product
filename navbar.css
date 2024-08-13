@@ -39,6 +39,7 @@ header {
   background-color: orange;
   padding: 0 8px;
   border-radius: 15px;
+  display: none;
   position: fixed;
   top: 16px;
   right: 70px;
@@ -65,7 +66,7 @@ nav li {
   height: 50px;
 }
 
-nav a {
+.sidebar-btn {
   display: flex;
   align-items: center;
   height: 100%;
@@ -80,6 +81,7 @@ nav a:hover {
 }
 
 .sidebar {
+  border: 1px solid blue;
   background-color: white;
   position: fixed;
   top: 0;
@@ -111,7 +113,7 @@ nav a:hover {
 }
 
 .sidebar li {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   padding: 0 25px;
   /* width: 100%; */
 }
