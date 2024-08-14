@@ -36,16 +36,25 @@
       <div class="header-left">
         <img src="./images/icon-menu.svg" class="menu-img" alt="open menu">
         <img src="./images/logo.svg" class="logo-img" alt="logo">
+        <nav class="desktop">
+          <ul>
+            <li><a href="#" class="desktop-btn">Collections</a></li>
+            <li><a href="#" class="desktop-btn">Men</a></li>
+            <li><a href="#" class="desktop-btn">Women</a></li>
+            <li><a href="#" class="desktop-btn">About</a></li>
+            <li><a href="#" class="desktop-btn">Contact</a></li>
+          </ul>
+        </nav>
       </div>
+
+      
 
       <div class="header-right">
         
-        <div class="test">
           <div id="item-output">
             <p class="cart-number">0</p>
           </div>
           <img src="./images/icon-cart.svg" class="cart-img" alt="cart icon">
-        </div>
         <img src="./images/image-avatar.png" class="profile-img" alt="profile picture">
       </div>
     </header>
@@ -70,11 +79,27 @@
       </section>
     </section>
 
+    <section class="main-container">
     <!-- TOP SECTION -->
       <section class="top-section">
         <div class="hero-img">
           <!-- Images will be dynamically inserted here -->
       </div>
+      <div class="img-card">
+          <div class="thumbnail-box">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" data-index="0">
+          </div>
+          <div class="thumbnail-box">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" data-index="1">
+          </div>
+          <div class="thumbnail-box">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" data-index="2">
+          </div>
+          <div class="thumbnail-box">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" data-index="3">
+          </div>
+      </div>
+      
   
       <div class="nav-btn-box">
           <div class="nav-btn">
@@ -86,48 +111,51 @@
       </div>
       </section>
 
-      <section class="middle-section">
-        <div class="brand-name">
-          <p>SNEAKER COMPANY</p>
-        </div>
-        <div class="product-name">
-          <p id="product-name-title">Fall Limited Edition Sneakers</p>
-        </div>
-        <div class="product-description">
-          <p id="description">
-            These low-profile sneakers are your perfect casual wear companion. Featuring a 
-            durable rubber outer sole, they’ll withstand everything the weather can offer.
-          </p>
-        </div>
+    <section class="desktop-middle-section">
+
+        <section class="middle-section">
+          <div class="brand-name">
+            <p>SNEAKER COMPANY</p>
+          </div>
+          <div class="product-name">
+            <p id="product-name-title">Fall Limited Edition Sneakers</p>
+          </div>
+          <div class="product-description">
+            <p id="description">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+        </section>
+  
+        <section class="bottom-section">
+          <div class="price-box">
+            <div class="discount-box">
+              <p id="discount-price">$125.00</p>
+              <p id="discount-Percentage">50%</p>
+            </div>
+  
+            <div class="full-price">
+              <p class="total-price">$250.00</p>
+            </div>
+          </div>
+          <section class="desktop-bottom-view">
+            <div class="numOfItem">
+              <div class="minus-box">
+                <img src="./images/icon-minus.svg" id="minus" alt="minus number of items">
+              </div>
+              <input type="number" id="items" value="0">
+              <div class="plus-box">
+                <img src="./images/icon-plus.svg" id="plus" alt="plus number of items">
+              </div>
+            </div>
+    
+              
+              <button id="addCart"><img src="./images/icon-cart.svg" alt="cart image">Add to cart</button>
+          </section>
+        </section>
+        </section>
       </section>
-
-      <section class="bottom-section">
-        <div class="price-box">
-          <div class="discount-box">
-            <p id="discount-price">$125.00</p>
-            <p id="discount-Percentage">50%</p>
-          </div>
-
-          <div class="full-price">
-            <p class="total-price">$250.00</p>
-          </div>
-        </div>
-        <div class="numOfItem">
-          <div class="minus-box">
-            <img src="./images/icon-minus.svg" id="minus" alt="minus number of items">
-          </div>
-          <input type="number" id="items" value="0">
-          <div class="plus-box">
-            <img src="./images/icon-plus.svg" id="plus" alt="plus number of items">
-          </div>
-        </div>
-
-        <div class="cartBtn">
-          <img src="./images/icon-cart.svg" alt="cart image">
-          <button id="addCart">Add to cart</button>
-        </div>
-      </section>
-
       <!-- CHECKOUT -->
       <section class="cart-box">
         <div class="cart-title">
@@ -135,19 +163,6 @@
         </div>
         <div class="cart-box-item">
           <p class="cart-empty-text">Your cart is empty.</p>
-
-          <!-- <div class="checkout-item">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="">
-            <div class="checkout-product">
-              <div class="checkout-productName">
-                <p>Fall Limited Edition Sneakers</p>
-              </div>
-              <div class="checkout-productPrice">
-                <p>$125.00 x 3  <span id="total"> $375.00</span></p>
-              </div>
-            </div>
-            <img src="./images/icon-delete.svg" alt="">
-          </div> -->
 
         </div>
         <div class="checkout-box">
