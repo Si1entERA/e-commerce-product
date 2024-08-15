@@ -49,6 +49,7 @@ const openProfile = () => {
 const closeMenu = () => {
   sidebar.classList.remove('open')
   overlay.style.display = 'none'
+  body.classList.remove('lock')
 }
 
 const closeProfile = () => {
