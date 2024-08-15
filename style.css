@@ -497,6 +497,7 @@ input[type=number] {
     width: 350px;
     border-radius: 15px;
     margin-bottom: 18px;
+    cursor: pointer;
   }
 
   .logo-img {
@@ -544,6 +545,10 @@ input[type=number] {
 
   .img-card {
     display: flex;
+  }
+
+  .img-card img {
+    cursor: pointer;
   }
 
   .desktop-middle-section {
