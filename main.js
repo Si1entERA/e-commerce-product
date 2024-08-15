@@ -25,6 +25,12 @@ const plus = document.querySelector('.plus-box');
 const minus = document.querySelector('.minus-box');
 const items = document.getElementById('items');
 
+// desktop gallery
+const desktopGallery = document.querySelector('.hero-img');
+const desktopLightView = document.querySelector('.desktop-lightbox');
+const desktopLightboxClose = document.querySelector('.desktop-lightbox-close');
+const arrowBtn = document.querySelector('.nav-btn-box');
+
 
 
 // *********************************
@@ -38,7 +44,6 @@ const openMenu = () => {
 const openProfile = () => {
   profileCard.style.display = 'flex';
   overlay.style.display = 'block'
-
 }
 
 const closeMenu = () => {
@@ -76,27 +81,15 @@ const decrementItems = () => {
   }
 }
 
-/*
-const calculation = () => {
-
-const total = document.getElementById('total').val;
-const discountPrice = document.getElementById('discount-price').innerHTML
-const dicountValueOnly = discountPrice.replace(/[^0-9.]/g, '');
-
-const totalPrice = document.querySelector('.total-price').innerHTML;
-const totalPriceOnly = totalPrice.replace(/[^0-9.]/g, '');
-
-const discountPercentage = document.getElementById('discount-Percentage').innerHTML;
-const PercentageOnly = discountPercentage.replace(/[^0-9]/g, '');
-
-let subAns = (PercentageOnly / 100) * totalPriceOnly
-
-  total = (totalPriceOnly - subAns) * items.innerHTML
-  console.log((totalPriceOnly - subAns) * items.value)
-
+const openLightbox = () => {
+  desktopLightView.style.display = 'block';
+  overlay.style.display = 'block'
 }
-*/
 
+const closeLightbox = () => {
+  desktopLightView.style.display = 'none';
+  overlay.style.display = 'none';
+}
 
 // cart
 const cartBox = document.querySelector('.cart-box-item');
@@ -104,8 +97,6 @@ const carEmptyText = document.querySelector('.cart-empty-text');
 const addCart = document.getElementById('addCart');
 const cartNumber = document.querySelector('.cart-number');
 const itemOutput = document.getElementById('item-output');
-const test = document.querySelector('.test1');
-
 const total = document.getElementById('total');
 
 
@@ -117,16 +108,14 @@ const addItem = () => {
     itemOutput.style.display = 'block';
     carEmptyText.style.display = 'none';
 
-    // Parse the discount price to ensure it's a valid number
     const discountPrice = parseFloat(document.getElementById('discount-price').innerHTML.replace('$', '').trim());
 
-    // Parse the items value to ensure it's a number
     const itemCount = parseInt(items.value, 10);
 
     if (!isNaN(discountPrice) && !isNaN(itemCount)) {
       const totalValue = (discountPrice * itemCount).toFixed(2);
 
-      const ot = `
+      const cardOutput = `
         <div class="checkout-item">
           <img src="./images/image-product-1-thumbnail.jpg" alt="">
           <div class="checkout-product">
@@ -140,9 +129,8 @@ const addItem = () => {
           <img src="./images/icon-delete.svg" class="delete-icon" alt="delete icon">
         </div>`;
       
-      cartBox.insertAdjacentHTML("beforeend", ot);
+      cartBox.insertAdjacentHTML("beforeend", cardOutput);
 
-      // Add event listener to the new delete icon
       const newDeleteIcon = cartBox.querySelector('.checkout-item:last-child .delete-icon');
       newDeleteIcon.addEventListener('click', handleDelete);
     } else {
@@ -151,7 +139,6 @@ const addItem = () => {
   }
 };
 
-// Function to handle the delete action
 function handleDelete(event) {
   const item = event.target.closest('.checkout-item');
   if (item) {
@@ -167,58 +154,13 @@ function handleDelete(event) {
 }
 
 
-
-// DARK MODE
-const darkmode = document.getElementById('darkmode');
-const productNameTitle = document.getElementById('product-name-title');
-const description = document.getElementById('description');
-const discountPrice = document.getElementById('discount-price');
-const discountPercentageBox = document.getElementById('discount-Percentage');
-const sidebarBtn = document.querySelectorAll('sidebar-btn')
-
-// SIDEBAR
-
-
-const switchDarkmode = (e) => {
-  if(e.target.checked){
-    profileCard.style.backgroundColor = 'black'
-    body.style.backgroundColor = 'black'
-
-  //   sidebar.style.backgroundColor = 'var(--Black)'
-  //   sidebarBtn.forEach(btn => {
-  //     btn.style.color = 'white';
-  // });
-
-    productNameTitle.style.color = 'var(--White)'
-    description.style.color = 'var(--White)'
-    discountPrice.style.color = 'var(--White)'
-    discountPercentageBox.style.color = 'black'
-    discountPercentageBox.style.backgroundColor = 'var(--White)'
-
-    cartCard.backgroundColor = 'black'
-    
-  }
-  else{
-    profileCard.style.backgroundColor = 'var(--White)'
-    body.style.backgroundColor = 'var(--White)'
-
-    productNameTitle.style.color = 'black'
-    description.style.color = 'var(--Dark-grayish-blue)'
-    discountPrice.style.color = 'black'
-    discountPercentageBox.style.color = 'var(--White)'
-    discountPercentageBox.style.backgroundColor = 'black'
-
-  }
-}
-
-
-// Add event listener to the add to cart button
 addCart.addEventListener('click', addItem);
 openSidebar.addEventListener('click', openMenu)
 closeSidebar.addEventListener('click', closeMenu)
 profile.addEventListener('click', openProfile)
 profileCloseBtn.addEventListener('click', closeProfile)
-darkmode.addEventListener('change', switchDarkmode)
 cartBtn.addEventListener('click', openCart)
 plus.addEventListener('click', incrementItems);
 minus.addEventListener('click', decrementItems)
+desktopGallery.addEventListener('click', openLightbox)
+desktopLightboxClose.addEventListener('click', closeLightbox)

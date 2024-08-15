@@ -1,7 +1,7 @@
 
 
 .header-right {
-  border: 1px solid crimson;
+  /* border: 1px solid crimson; */
   display: flex;
 }
 
@@ -109,7 +109,7 @@ nav a:hover {
 }
 
 .sidebar li {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   padding: 0 25px;
   /* width: 100%; */
 }
